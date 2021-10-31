@@ -364,7 +364,7 @@ except ValueError:
 except ZeroDivisionError as err:
     print(err)
 
-"""
+
 # Reading from external files
 
 # r read only
@@ -372,12 +372,84 @@ except ZeroDivisionError as err:
 # a append only
 # r+ read and write
 
-seasons_file = open("Seasons.csv", "r")
+# seasons_file = open("Seasons.csv", "r")
+# employee_file = open("employee.txt", "a")
 # make sure the file is readable
 # print(seasons_file.readable())
 # read
 # print(seasons_file.read())
 # read the first line
-print(seasons_file.readline())
-seasons_file.close()
+# print(seasons_file.readline())
+# for seasons in seasons_file.readlines():
+# print(seasons)
+
+# Creating a new file
+creatingnewfile = open("Index1.html", "w")
+creatingnewfile.write("<p>I just added this random thing</p>")
+creatingnewfile.close()
+# MODULES
+
+import useful_tools
+
+print(useful_tools)
+
+go to cmd and hit pip install python.docx
+
+import docx
+
+# student is file and Student is class
+from student import Student
+student1 = Student("Jim", "Religion", 3.1, False)
+# print out the student name
+student2 = Student("Jane", "Art", 2.1, True)
+
+print(student2.name)
+
+from Question import Question
+
+question_prompts = [
+    "What are apples?\n(a) Red \n(b) Orange\n\n",
+    "What are bananas?\n(a) yellow \n(b) purple\n\n",
+    "What are Strawberries?\n(a) pink \n(b) green\n\n",
+]
+questions = [
+    Question(question_prompts[0], "a"),
+    Question(question_prompts[1], "a"),
+    Question(question_prompts[2], "a")
+]
+
+
+def run_test(questions):
+    score = 0
+    for question in questions:
+        answer = input(question.prompt)
+        if answer == question.answer:
+            score += 1
+    print("You got " + str(score) + "/" + str(len(questions)) + " correct")
+
+
+run_test(questions)
+
+# Object functions
+
+from student import Student
+
+student1 = Student("Jim", "Religion", 3.1, False)
+student2 = Student("Jane", "Art", 2.1, True)
+print(student2.on_honour_roll())
+# INHERITANCE
+from Chef import Chef
+
+myChef = Chef()
+myChef.make_salad()
+
+# INHERITANCE
+from ChineseChef import ChineseChef
+
+myChef = ChineseChef()
+myChef.make_special_dish()
+myChef.make_fried_rice()
+
+"""
+
 
