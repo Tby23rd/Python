@@ -1,8 +1,6 @@
 """
 returns true or false
-:param list:
-:param target:
-:return:
+space complexity of O(log n)
 """
 
 
